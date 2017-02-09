@@ -1,0 +1,36 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+      function solution(str) {
+      var newStr="";
+            for(var i=0;i<str.length;i++)
+            {
+                  
+                  if(str[i]=="a"||str[i]=="e"||str[i]=="i"||str[i]=="o"||str[i]=="u"||str[i]=="y"||str[i]=="Y"||str[i]=="U"||str[i]=="O"||str[i]=="I"||str[i]=="E"||str[i]=="A")
+                  {
+                        for(var j=0;j<i;j++){
+                              newStr+=str[j];
+                              
+                        }
+                        
+                        for(var j=i+1;j<str.length;j++){
+
+                              newStr+=str[j];
+                        }
+                        
+                       
+                        str=""+newStr;
+                        newStr="";
+                        i--;
+                  }
+            } 
+      }
+      solution("This website is for losers LOL!");
+</script>
+</body>
+</html>

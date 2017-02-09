@@ -1,0 +1,34 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+       function tribonachi(signature,n)
+       {
+       var x=signature[0];
+       var y=signature[1];
+       var z=signature[2];
+
+       var result=[];
+
+       for(var i=0;i<n&&i<3;i++)
+       		result[i]=signature[i];
+       
+       for(var i=3;i<n;i++)
+       	{
+       		var R=x+y+z;
+       		x=y; 
+       		y=z;
+       		z=R;
+       		result[i]=R;
+       	}
+
+		return result;
+       }
+       tribonachi([1,1,1],0);
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*
+
+  codewars5
+
+*/
+
+function SubstitutionCipher(abc1, abc2) {
+  this.encode = function (str) {
+      for(var i=0;i<str.length)
+            str[i]=abc2[i];
+  }
+  this.decode = function (str) {
+       for(var i=0;i<str.length;i++)
+            str[i]=abc1[i];
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* 
+
+            КЛОНИРОВАНИЕ ОБЪЕКТА
+
+
+  var original = {
+    a: 1,
+    b: true,
+    d: false,
+    e: 'string in object',
+    f: {
+        g: [2, 3, 4, 5, 6]
+    }, 
+    h: null
+};
+
+// Объект cloned содержит все свойства объекта original
+var cloned = (JSON.parse(JSON.stringify(original)));
+alert(cloned.a);
+alert(cloned.b);
+alert(cloned.d);
+alert(cloned.e);
+alert(cloned.f.g[1]);
+alert(cloned.h);
+
+
+*/
+</script>
+</body>
+</html>

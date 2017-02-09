@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        var song="WUBAWUBWUBBWUBWUBCWUB"
+        var strWUB="WUB";
+        var intArr=[];
+
+//        var nstr="";
+//        for(i=3;i<song.length;i++)
+//            nstr+=song[i];
+//        song=nstr;
+//        alert(song);
+//
+
+//        var pos=-1;
+//        while(pos=song.indexOf(strWUB,pos+1)!=-1) {
+//            alert(pos);
+//       pos+=3;
+//        }
+
+        var pos=0;
+        var newSng="";
+
+        while(true)
+        {
+            var newSong="";
+             var foundPos = song.indexOf(strWUB,pos);
+            if(foundPos ==-1) break;
+
+          //  alert(foundPos);
+            pos=foundPos+1;
+
+            for(var i=0;i<foundPos;i++)
+                newSong+=song[i];
+            if(song[i]!="!") newSong+="!";
+
+            for(var i=foundPos+3;i<song.length;i++)
+                newSong+=song[i];
+            song=newSong
+
+        }
+
+
+        if(song[0]==" ") {
+            for (var i = 1; i < song.length; i++)
+                newSng += song[i];
+
+            song = newSng;
+        }
+        newSng="";
+
+
+        if(song[song.length-1]=" ")
+            for(var i=0;i<song.length-1;i++)
+                newSong+=song[i];
+        song=newSong;
+
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//        for(var i=0;i<song.length-1;i++)
+//        {
+//            alert("1");
+//            if(song[i]==" ")
+//            {
+//                alert("2");
+//
+//                if(song[i+1]==" ") {
+//                    alert("3");
+//
+//                    for (var j = 0; j < i; j++) {
+//                        newSong += song[j];
+//                    }
+//                    j++;
+//                    for (j; j < song.length; j++) {
+//                        newSong += song[j];
+//                    }
+//
+//                    song=newSong;
+//                i--;
+//                }
+//            }
+//        }
+//       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        alert(song);
+
+//      for(var i=0;i<song.length;i++) {
+//            intArr.push(song.indexOf(strWUB,i));
+//            i+3
+//        }
+//        for(i=0;i<intArr.length;i++)
+//        alert(intArr[i]);
+        /* for(var i=0;i<song.length();i++)
+            {
+              var  tempInt=song.indexOf(strWUB);
+                if(tempInt!=-1) alert(tempInt);
+                else i=song.length();
+            }*/
+</script>
+</body>
+</html>

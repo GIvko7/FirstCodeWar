@@ -1,0 +1,55 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+      function findDiscounted(prices){
+            var tempToInt="";
+            var PrePrices=[];
+            var NewPrices=prices+" ";
+            for(var i=0;i<NewPrices.length;i++)
+            {
+                  if(NewPrices[i]!=" ")
+                  {
+                        tempToInt+=NewPrices[i];
+                  }
+                  else{
+                        PrePrices.push(parseInt(tempToInt));
+                        tempToInt="";
+                 } 
+
+            }     
+           prices=PrePrices;
+           alert(prices);
+
+            var ReadyArr=[];
+            for(var i=0;i<prices.length;i++)
+            {
+                  for(var j=0;j<prices.length&&i!=j;j++)
+                  {
+                        if((prices[i]/0.75)==prices[j])
+                        {
+                              ReadyArr.push(prices[i]);
+                              prices[i]="ф";
+                              prices[j]="nфl";
+                        }
+                  }
+            }    
+
+            var EndArr="";
+            for(var i=0;i<ReadyArr.length;i++)
+            {
+                  EndArr+=ReadyArr[i]+" ";
+            }
+            var aaa="";
+            for(var i=0;i<EndArr.length-1;i++)
+                  aaa+=EndArr[i];
+            return aaa;
+      }
+alert(findDiscounted("0 0"));
+</script>
+</body>
+</html>
